@@ -278,16 +278,23 @@ span {
   color: var(--text-color);
   background: #f5f4fa;
   border-radius: 4px;
+  border: none;
   cursor: pointer;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
 .button:focus {
   color: #ffffff;
   background: var(--background-color-blue);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-images {
   list-style: none;
@@ -338,9 +345,6 @@ span {
   line-height: 1.87;
   letter-spacing: 0.03em;
 }
-/* .list-images a {
-  text-decoration: none;
-} */
 .link-overlay {
   text-decoration: none;
 }
@@ -444,6 +448,7 @@ span {
 }
 .thumb {
   position: relative;
+  display: flex;
 }
 .apps {
   position: absolute;
@@ -687,19 +692,25 @@ h2 {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
-
   background: #ffffff;
-  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px; */
+  border-radius: 4px;
 }
 .modal-close {
+  display: flex;
   position: absolute;
+  width: 30px;
+  height: 30px;
   top: 8px;
   right: 8px;
-  fill: #212121;
-  background: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   border-radius: 50%;
+  cursor: pointer;
+}
+.modal-close svg {
+  align-items: center;
+  fill: #212121;
 }
